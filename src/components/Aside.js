@@ -1,19 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Header = styled.header`
-  width: 25%;
-  min-height: 100%;
-  background-color: yellow;
+const Side = styled.div`
   display: block;
 `
 
 const Aside = ({children}) => {
   return (
-    <Header>
-    <p>teste</p>
-    {children}
-    </Header>
+    <Side>
+      <h2>yesye</h2>
+    </Side>
   )
 }
 

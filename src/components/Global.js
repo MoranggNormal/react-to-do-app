@@ -2,13 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Div = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  min-width: calc(45vw - 3px);
-  max-width: calc(45vw - 3px);
+  width: 40vw;
   min-height: 70vh;
-  max-height: 70vh;
-  background-color: pink;
+  background-color: #749BE7;
+  border-radius: 0.4rem;
 `
 
 const Global = ({children}) => {

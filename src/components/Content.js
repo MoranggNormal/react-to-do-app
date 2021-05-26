@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Content = styled.main`
-  min-width: 50%;
+const Content = styled.section`
   background-color: purple;
 `
 
-const Main = () => {
+const Main = ({children}) => {
   return (
     <Content>
+    {children}
     </Content>
   )
 }

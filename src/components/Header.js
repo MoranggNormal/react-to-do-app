@@ -3,19 +3,18 @@ import styled from 'styled-components'
 
 const Head = styled.header`
   min-width: 100%;
-  min-height: 41px;
-  max-height: 41px;
+  min-height: 60px;
   display: flex;
 `
 const Title = styled.span`
-  min-width: 20%;
-  min-height: 41px;
+  min-width: 30%;
+  min-height: 60px;
+  display: grid;
+  place-items: center;
 `
 const Input = styled.div`
-  min-width: 80%;
-  min-height: 41px;
-  max-width: 80%;
-  max-height: 41px;
+  min-width: 70%;
+  min-height: 60px;
 `
 
 const Header = ({children}) => {
