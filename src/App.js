@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Form from './components/Form'
+import Input from './components/Input'
 import Add from './components/Add'
 import Delete from './components/Delete'
 import Edit from './components/Edit'
@@ -38,10 +40,10 @@ function App() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} value={input}></input>
+      <Form handleSubmit={handleSubmit}>
+        <Input handleChange={handleChange} />
         <Add handleClick={handleClick}/>
-      </form>
+      </Form>
 
       <ul>
       {list.map((item, index) =>
