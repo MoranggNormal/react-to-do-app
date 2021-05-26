@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Formy = styled.form`
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
 `
 
 const Form = ({handleSubmit, children}) => {

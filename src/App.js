@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 import Global from './components/Global'
+import Header from './components/Header'
 import Aside from './components/Aside'
 import Form from './components/Form'
+import Main from './components/Main'
 import Input from './components/Input'
 import Add from './components/Add'
 import Delete from './components/Delete'
@@ -42,11 +44,15 @@ function App() {
 
   return (
     <Global>
-      <Aside></Aside>
+
+    <Header>
       <Form handleSubmit={handleSubmit}>
         <Input handleChange={handleChange} />
         <Add handleClick={handleClick}/>
       </Form>
+    </Header>
+
+      <Main></Main>
 
       <ul>
       {list.map((item, index) =>

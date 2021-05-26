@@ -5,7 +5,9 @@ const Div = styled.div`
   display: flex;
   flex-flow: row wrap;
   min-width: calc(45vw - 3px);
+  max-width: calc(45vw - 3px);
   min-height: 70vh;
+  max-height: 70vh;
   background-color: pink;
 `
 
