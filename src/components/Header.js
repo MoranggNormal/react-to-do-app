@@ -7,13 +7,13 @@ const Head = styled.header`
   display: flex;
 `
 const Title = styled.span`
-  min-width: 30%;
+  min-width: 20%;
   min-height: 60px;
   display: grid;
   place-items: center;
 `
 const Input = styled.div`
-  min-width: 70%;
+  min-width: 80%;
   min-height: 60px;
 `
 
