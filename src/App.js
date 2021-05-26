@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Global from './components/Global'
+import Aside from './components/Aside'
 import Form from './components/Form'
 import Input from './components/Input'
 import Add from './components/Add'
@@ -39,7 +41,8 @@ function App() {
   }
 
   return (
-    <div>
+    <Global>
+      <Aside></Aside>
       <Form handleSubmit={handleSubmit}>
         <Input handleChange={handleChange} />
         <Add handleClick={handleClick}/>
@@ -57,7 +60,7 @@ function App() {
       )}
      </ul>
 
-    </div>
+   </Global>
   );
 }
 

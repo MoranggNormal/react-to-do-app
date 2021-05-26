@@ -9,7 +9,7 @@ const Text = styled.input`
 
 const Input = ({handleChange, input}) => {
   return (
-    <Text type="text" value={input} onChange={handleChange}>
+    <Text type="text" size="35" value={input} onChange={handleChange}>
     </Text>
   )
 }
