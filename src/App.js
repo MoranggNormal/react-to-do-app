@@ -8,9 +8,13 @@ function App() {
 
   const handleClick = () => {
   if(input === '') return
-  if(list.includes(input)) return
+  const find = list.findIndex(val => val.todo === input)
+  if(find < 0){
   setList([...list, {todo: `${input}`}])
   setInput('')
+  }else{
+  return
+}
 }
 
   const handleChange = ({target}) => {
@@ -29,16 +33,17 @@ function App() {
       </form>
 
       <ul>
-      {list.map((lista, index) =>
+      {list.map((item, index) =>
         <li key={index}>
-        {lista.todo}
+        {item.todo}
+
         <button
         type="button"
-        onClick={() => setList(list.filter((e) => e !== lista))}>
+        onClick={() => setList(list.filter((e) => e !== item))}>
         Excluir
       </button>
       <button
-        type="button" onClick={() => lista.todo = 'ola'}>
+        type="button" onClick={() => item.todo = 'ola'}>
         Editar
       </button>
         </li>
