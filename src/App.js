@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import Add from './components/Add'
+import Delete from './components/Delete'
+import Edit from './components/Edit'
+
 
 function App() {
 
@@ -7,15 +11,22 @@ function App() {
   const [list, setList] = React.useState([])
 
   const handleClick = () => {
-  if(input === '') return
-  const find = list.findIndex(val => val.todo === input)
-  if(find < 0){
-  setList([...list, {todo: `${input}`}])
-  setInput('')
-  }else{
-  return
+    if(input === '') return
+    const find = list.findIndex(val => val.todo === input)
+    if(find < 0){
+    setList([...list, {todo: `${input}`}])
+    setInput('')
+    }else{
+    return
+  }
 }
-}
+  const handleDelete = (item) => {
+    setList(list.filter((e) => e !== item))
+  }
+
+  const handleEdit = (item) => {
+    item.todo = 'ola'
+  }
 
   const handleChange = ({target}) => {
     setInput(target.value)
@@ -29,7 +40,7 @@ function App() {
     <div>
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleChange} value={input}></input>
-        <button type="submit" onClick={handleClick}>Enviar</button>
+        <Add handleClick={handleClick}/>
       </form>
 
       <ul>
@@ -37,15 +48,9 @@ function App() {
         <li key={index}>
         {item.todo}
 
-        <button
-        type="button"
-        onClick={() => setList(list.filter((e) => e !== item))}>
-        Excluir
-      </button>
-      <button
-        type="button" onClick={() => item.todo = 'ola'}>
-        Editar
-      </button>
+      <Delete handleDelete={() => handleDelete(item)} />
+
+      <Edit handleEdit={() => handleEdit(item)}/>
         </li>
       )}
      </ul>
