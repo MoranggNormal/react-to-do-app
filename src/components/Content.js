@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Content = styled.section`
-  height: calc(81% - 0.1rem);
+display: flex;
+flex-flow: row wrap;
+  height: calc(86% - 0.1rem);
   background-color: #f9f9f9;
 `
 

@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Side = styled.aside`
-  max-width: calc(22% + 3px);
+  min-width: 20%;
   min-height: 100%;
   display: block;
-  background-color: #749BE7;
+  background-color: #f4a9a8;
   padding: 0.7rem 0.4rem;
 `
 

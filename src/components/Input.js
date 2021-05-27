@@ -6,18 +6,13 @@ const Text = styled.input`
   outline: none;
   border: none;
   min-width: 78%;
-  border-radius: 10px 0 0 10px;
-`
-
-const Label = styled.label`
-  padding: 1.3rem 0.5rem;
+  border-radius: 3px 0 0 3px;
 `
 
 const Input = ({handleChange, input}) => {
   return (
     <>
-      <Label htmlFor="text">Adicione uma nova tarefa:</Label>
-    <Text type="text" id="text" value={input} onChange={handleChange}>
+    <Text type="text" value={input} placeholder="Adicione uma nova tarefa..." onChange={handleChange}>
     </Text>
     </>
   )

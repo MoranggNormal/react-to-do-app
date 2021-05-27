@@ -3,6 +3,7 @@ import './App.css';
 import Global from './components/Global'
 import Header from './components/Header'
 import Aside from './components/Aside'
+import Main from './components/Main'
 import Form from './components/Form'
 import Content from './components/Content'
 import Input from './components/Input'
@@ -55,19 +56,25 @@ function App() {
         <Aside>
         </Aside>
 
+        <Main>
+
+          <ul>
+          {list.map((item, index) =>
+            <li key={index}>
+            {item.todo}
+
+          <Delete handleDelete={() => handleDelete(item)} />
+
+          <Edit handleEdit={() => handleEdit(item)}/>
+            </li>
+          )}
+         </ul>
+
+        </Main>
+
       </Content>
 
-      <ul>
-      {list.map((item, index) =>
-        <li key={index}>
-        {item.todo}
 
-      <Delete handleDelete={() => handleDelete(item)} />
-
-      <Edit handleEdit={() => handleEdit(item)}/>
-        </li>
-      )}
-     </ul>
 </Global>
   );
 }

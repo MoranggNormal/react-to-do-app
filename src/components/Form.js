@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const Formy = styled.form`
   display: inline-block;
+  min-width: 100%;
   padding: 0.7rem;
 `
 
