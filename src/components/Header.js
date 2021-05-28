@@ -25,8 +25,8 @@ const Input = styled.div`
 `
 
 const style = {
-      width: `${52}px`,
-      height: `${52}px`,
+      width: `${44}px`,
+      height: `${44}px`,
       borderRadius: `${50}%`,
       border: `${1}px solid #ce${97}b${0}`,
       marginLeft: `${0.8}rem`
