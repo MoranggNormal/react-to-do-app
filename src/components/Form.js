@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Formy = styled.form`
-  display: inline-block;
+  display: flex;
   min-width: 100%;
   padding: 0.7rem;
 `

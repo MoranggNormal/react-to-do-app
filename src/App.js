@@ -7,6 +7,7 @@ import Main from './components/Main'
 import Form from './components/Form'
 import Content from './components/Content'
 import Input from './components/Input'
+import Item from './components/Item'
 import Add from './components/Add'
 import Delete from './components/Delete'
 import Edit from './components/Edit'
@@ -60,13 +61,13 @@ function App() {
 
           <ul>
           {list.map((item, index) =>
-            <li key={index}>
+            <Item key={index}>
             {item.todo}
 
           <Delete handleDelete={() => handleDelete(item)} />
 
           <Edit handleEdit={() => handleEdit(item)}/>
-            </li>
+          </Item>
           )}
          </ul>
 

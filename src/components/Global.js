@@ -6,9 +6,7 @@ const Div = styled.div`
   height: 70vh;
   min-height: 70vh;
   max-height: 70vh;
-  background-color: #f4a9a8;
   border-radius: 0.3rem 0 0 0 ;
-  border: 2px solid #f4a9a8;
 `
 
 const Global = ({children}) => {
