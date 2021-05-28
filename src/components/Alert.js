@@ -6,7 +6,8 @@ const Alerta = styled.h3`
     background-color: #f4a9a8;
     border-radius: 0.2rem;
     transition: all 0.4s;
-      color: #393e46;
+    color: #393e46;
+    font-family: Rune;
     position: absolute;
     top: 5%;
     left: 50%;
