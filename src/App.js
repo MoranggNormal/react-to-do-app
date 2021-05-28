@@ -19,6 +19,7 @@ function App() {
   const [list, setList] = React.useState([])
 
   const handleClick = () => {
+    if(input.length > 31) return
     if(input === '') return
     const find = list.findIndex(val => val.todo === input)
     if(find < 0){
@@ -61,12 +62,15 @@ function App() {
 
           <ul>
           {list.map((item, index) =>
-            <Item key={index}>
-            {item.todo}
+            <Item key={index} item={item}>
+
+
+
 
           <Delete handleDelete={() => handleDelete(item)} />
 
           <Edit handleEdit={() => handleEdit(item)}/>
+
           </Item>
           )}
          </ul>

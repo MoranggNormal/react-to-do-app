@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ListItem = styled.li`
+  display: flex;
   min-width: 100%;
   max-width: 100%;
   padding: 0.4rem;
@@ -20,15 +21,25 @@ const ListItem = styled.li`
 const H5 = styled.h5`
   font-family: Rune;
   color: #393e46;
-
+  min-width: 80%;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+`
+const Span = styled.span`
+  min-width: 20%;
+  max-width: 20%;
 `
 
-const Item = ({children}) => {
+const Item = ({item, children}) => {
   return (
     <ListItem>
     <H5>
-    {children}
+      {item.todo}
   </H5>
+  <span>
+    {children}
+  </span>
     </ListItem>
   )
 }
