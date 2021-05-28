@@ -9,11 +9,11 @@ const Button = styled.button`
   cursor: pointer;
   padding: 0.5rem;
   transition: 0.3s;
-  background-color: #ffcc29;
+  background-color: #fdb827;
   color: #feffde;
   border-radius: 0.2rem;
   &:hover{
-    background-color: #B3AA0E;
+    background-color: #fdca40;
   }
 `
 const Add = ({handleEdit}) => {

@@ -8,7 +8,7 @@ const Content = styled.main`
   overflow-x: hidden;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
 
 `
 

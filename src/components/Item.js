@@ -9,15 +9,26 @@ const ListItem = styled.li`
   background-color: #fbc6a4;
   overflow: hidden;
   font-size: 0.8rem;
-  letter-spacing: 1px
+  letter-spacing: 1px;
+  transition: 0.2s;
+  &:hover{
+    box-shadow: 0px 0px 5px 1px #fbc6a4 inset;
+    background-color: #f4a9a8;
+  };
+`
+
+const H5 = styled.h5`
+  font-family: Rune;
+  color: #393e46;
+
 `
 
 const Item = ({children}) => {
   return (
     <ListItem>
-    <h5>
+    <H5>
     {children}
-  </h5>
+  </H5>
     </ListItem>
   )
 }

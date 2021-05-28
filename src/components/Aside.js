@@ -36,7 +36,7 @@ const Item = styled.li`
 
 const Link = styled.a`
     color: #f7f3e9;
-    padding: 0.2rem 0.6rem;
+    padding: 0.7rem 0.4em 0.4rem 0.7rem;
     border: 1px solid #ce97b0;
     border-radius: 50%;
     transition: 0.3s;
@@ -53,19 +53,19 @@ const Aside = ({children}) => {
       <Nav>
         <Lista>
         <Item>
-          <Link href="#"><FaGithub /></Link>
+          <Link href="https://github.com/MoranggNormal" target="_blank"><FaGithub /></Link>
         </Item>
         <Item>
-          <Link href="#"><FaLinkedinIn /></Link>
+          <Link href="https://www.linkedin.com/in/euller-peixoto/" target="_blank"><FaLinkedinIn /></Link>
         </Item>
         <Item>
-          <Link href="#"><FaTelegramPlane /></Link>
+          <Link href="https://t.me/EullerPeixoto" target="_blank"><FaTelegramPlane /></Link>
         </Item>
         <Item>
-          <Link href="#"><FaWhatsapp /></Link>
+          <Link href="https://wa.me/qr/QY6YZNYNPO4ZN1" target="_blank"><FaWhatsapp /></Link>
         </Item>
         <Item>
-          <Link href="#"><FaFacebookF /></Link>
+          <Link href="https://www.facebook.com/euller.peixoto.18/?id=199933959494115" target="_blank"><FaFacebookF /></Link>
         </Item>
         </Lista>
       </Nav>

@@ -7,13 +7,14 @@ const Head = styled.header`
   min-height: 60px;
   display: flex;
 `
-const Title = styled.span`
+const Title = styled.h1`
   min-width: 18%;
   min-height: 60px;
   display: grid;
   place-items: center;
   background-color: #f4a9a8;
-  border-radius: 0.3rem 0 0 0 ;
+  border-radius: 0.3rem 0 0 0;
+  }
 
 `
 const Input = styled.div`
@@ -35,7 +36,9 @@ const Header = ({children}) => {
   return (
   <Head>
   <Title>
-    <img src={profile} style={style} alt="profile" />
+    <a href="https://github.com/MoranggNormal" target="_blank">
+      <img src={profile} style={style} alt="profile" />
+    </a>
   </Title>
   <Input>
     {children}
