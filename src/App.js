@@ -11,23 +11,28 @@ import Item from './components/Item'
 import Add from './components/Add'
 import Delete from './components/Delete'
 import Edit from './components/Edit'
+import Alert from './components/Alert'
+
 
 
 function App() {
 
   const [input, setInput] = React.useState('')
   const [list, setList] = React.useState([])
+  const [erro, setErro] = React.useState(false)
 
   const handleClick = () => {
-    if(input.length > 31) return
+    if(input.length > 31){
+        return setErro(true)
+     }
     if(input === '') return
     const find = list.findIndex(val => val.todo === input)
     if(find < 0){
     setList([...list, {todo: `${input}`}])
+    setErro(false)
     setInput('')
-    }else{
-    return
-  }
+  }else return
+
 }
   const handleDelete = (item) => {
     setList(list.filter((e) => e !== item))
@@ -47,9 +52,11 @@ function App() {
 
   return (
     <Global>
+      {erro === true && <Alert></Alert>}
+
     <Header>
       <Form handleSubmit={handleSubmit}>
-        <Input handleChange={handleChange} />
+        <Input input={input} handleChange={handleChange} />
         <Add handleClick={handleClick}/>
       </Form>
     </Header>

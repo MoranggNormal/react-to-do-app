@@ -26,10 +26,6 @@ const H5 = styled.h5`
   display: flex;
   align-items: center;
 `
-const Span = styled.span`
-  min-width: 20%;
-  max-width: 20%;
-`
 
 const Item = ({item, children}) => {
   return (
